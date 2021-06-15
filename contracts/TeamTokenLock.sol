@@ -1,9 +1,10 @@
 pragma solidity ^0.8.0;
 
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "./AllerSafe.sol";
 
 contract TeamTokenLock {
-    
+    using SafeERC20 for AllerSafe;
 
     // ERC20 basic token contract being held
     AllerSafe private immutable _token;
